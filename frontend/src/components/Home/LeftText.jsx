@@ -1,65 +1,61 @@
-import React, { use, useRef } from "react";
+import React, { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { useNavigate } from "react-router-dom";
 
 const LeftText = () => {
-  const textRef = useRef(null);
+  const containerRef = useRef(null);
+  const navigate = useNavigate();
 
   useGSAP(() => {
-    gsap.fromTo(
-      ".word",
+    const tl = gsap.timeline();
+
+    // Heading words stagger
+    tl.from(
+      containerRef.current.querySelectorAll(".word"),
       {
-        y: 60,
+        y: 80,
         opacity: 0,
-        filter: "blur(12px)",
-      },
+        filter: "blur(10px)",
+        duration: 1.2,
+        stagger: 0.25,
+        ease: "power3.out",
+      }
+    )
+
+    // Paragraph after heading
+    .from(
+      containerRef.current.querySelector(".para"),
       {
-        y: 0,
-        opacity: 1,
-        filter: "blur(0px)",
-        duration: 2,
-        stagger: 0.2,
-        delay: 0.6,
+        y: 30,
+        opacity: 0,
+        duration: 1,
         ease: "power3.out",
       },
-    );
-    gsap.fromTo(
-      "#para",
-      {
-        y: 20,
-        opacity: 0,
-        filter: "blur(8px)",
-      },
-      {
-        y: 0,
-        opacity: 1,
-        filter: "blur(0px)",
-        duration: 2,
-        delay: 0.6,
-        ease: "power3.out",
-      },
-    );
+      "-=0.4"
+    )
+
+
+
+
   }, []);
 
   return (
-    <div className="max-w-4xl flex flex-col text-center -mt-25  md:mt-32">
-      <h1
-        ref={textRef}
-        className="text-[40px] md:text-[76px] leading-[1.05] tracking-tight font-[font1]"
-      >
+    <div
+      ref={containerRef}
+      className="max-w-3xl flex flex-col items-center text-center px-4 mt-10 md:mt-20"
+    >
+      {/* Heading */}
+      <h1 className="text-[30px] sm:text-[38px] md:text-[72px] leading-[1.05] tracking-tight font-[font1] text-[#1E1E1E]">
         <span className="word block">Designs That</span>
-        <span className="word block text-red-500">Speak Your</span>
+        <span className="word block text-[#A66A3F]">Speak Your</span>
         <span className="word block">Way of Living</span>
       </h1>
 
-      <div></div>
-      <p
-        id="para"
-        className="mt-8 max-w-xl text-[17px] md:text-[18px] leading-relaxed text-white/80 font-normal hidden"
-      >
+      {/* Paragraph */}
+      <p className="para mt-6 text-[#4A4A4A] max-w-2xl text-[15px] sm:text-[17px] md:text-[22px] leading-relaxed font-medium">
         From concept to completion, we design interiors that feel personal,
-        practical, and timeless — bringing your vision to life with expert
-        craftsmanship.
+        practical, and timeless — bringing your vision to life with expert craftsmanship.
       </p>
     </div>
   );

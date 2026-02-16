@@ -19,6 +19,7 @@ import ContactSection from "./ContactSection";
 import Offer from "./Offer";
 import HeroSection from "./HeroSection";
 import GalleryParallax from "./GalleryParallax";
+import AboutSection from "./AboutSection";
 
 gsap.registerPlugin(ScrollTrigger);
 const Hero = () => {
@@ -38,16 +39,16 @@ const Hero = () => {
 
   return (
     <div>
-       <div className="" id="top">
-        {/*<HeroImage />
-        <div className="relative z-10 h-full flex flex-col md:flex-row justify-center items-center md:items-end md:px-16 md:pb-12 px-2 py-10 text-white mt-50 md:mt-0">
+      <div className="relative w-full h-[450px] md:h-[100dvh] overflow-hidden" id="top">
+        <HeroImage />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-white/10 to-transparent  z-10 h-full flex flex-col justify-center items-center  md:px-16 md:pb-12 px-4 text-white">
           <LeftText />
-          
-        </div>*/}
-      <HeroSection />
-      </div> 
+        </div>
+        {/* <HeroSection /> */}
+      </div>
+      {/* <AboutSection /> */}
       {/* Middle part -1 */}
-      <div className="w-full min-h-screen md:px-24 px-5 pt-20 md:pt-40 font-[font1] text-black">
+      <div className="w-full min-h-screen  md:px-24 px-5 pt-20 md:pt-40 font-[font1] text-black">
         {/* TOP CONTENT ROW */}
         <Content1 />
 
@@ -58,7 +59,7 @@ const Hero = () => {
         <ContentButton1 />
 
         {/* Clients Section */}
-        <Clients /> 
+        <Clients />
       </div>
 
       {/* <ExclusiveProjects />
@@ -67,8 +68,8 @@ const Hero = () => {
       <GalleryParallax />
 
       <Services />
-      
-      {/* <Testimonials /> */}
+
+      <Testimonials />
 
       <Offer />
 

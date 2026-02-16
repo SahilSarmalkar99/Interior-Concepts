@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import img from "../../assets/display/bg.png"
+import img1 from "../../assets/display/25.png"
 
 const HeroImage = () => {
   const imgRef = useRef(null);
@@ -27,13 +28,13 @@ const HeroImage = () => {
     <div className="absolute inset-0">
       <img
         ref={imgRef}
-        src={img}
+        src={img1}
         alt="Hero Image"
         className="absolute inset-0 w-full h-full object-cover z-0 bg-black/60"
       />
 
       {/* Blur Layer */}
-      <div className="hero-blur" />
+      {/* <div className="hero-blur" /> */}
     </div>
   );
 };
