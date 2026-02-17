@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-
+import img from "../../assets/display/au2.png"
 
 const AboutHero = () => {
   const imgRef = useRef(null);
@@ -40,12 +40,12 @@ const AboutHero = () => {
       {/* IMAGE */}
       <img
         ref={imgRef}
-        src="https://framerusercontent.com/images/t3Zc9jAtwooPGGrfn4hC1QMAoUs.png"
+        src={img}
         className="absolute inset-0 w-full h-full object-cover"
       />
 
       {/* GRADIENT */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/20" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/10 via-black/20 to-black/20" />
 
       {/* CONTENT */}
       <div className="relative z-10 h-full flex items-end p-5">

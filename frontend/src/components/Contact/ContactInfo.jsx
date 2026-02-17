@@ -1,13 +1,7 @@
 import React, { useState } from "react";
-import {
-  Mail,
-  MapPin,
-  Phone,
-  Plus,
-  Minus,
-  Facebook,
-  Instagram,
-} from "lucide-react";
+import { Mail, MapPin, Phone, Plus, Minus } from "lucide-react";
+
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -30,16 +24,15 @@ const contactInfo = [
     text: "Follow Us",
     socials: [
       {
-        icon: Facebook,
+        icon: FaFacebook,
         link: "https://www.facebook.com/share/1AQvYU3SN4/",
       },
       {
-        icon: Instagram,
+        icon: FaInstagram,
         link: "https://www.instagram.com/interior_concepts_?igsh=dGgwMWY4cjE1N3pz",
       },
     ],
   },
-
 ];
 
 const faqData = [
@@ -107,7 +100,8 @@ const ContactInfo = () => {
 
                   <div className="flex gap-4">
                     {item.socials.map((social, i) => {
-                      const SocialIcon = social.icon;
+                      const isFacebook = social.icon === FaFacebook;
+                      const isInstagram = social.icon === FaInstagram;
 
                       return (
                         <a
@@ -115,18 +109,22 @@ const ContactInfo = () => {
                           href={social.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="w-11 h-11 rounded-xl bg-[#B8B2A5] flex items-center justify-center
-                          hover:scale-110 hover:bg-[#9C937A] transition duration-300"
+                          className={`w-11 h-11 rounded-xl flex items-center justify-center
+      hover:scale-110 transition duration-300
+      ${
+        isFacebook
+          ? "bg-[#1877F2]"
+          : "bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600"
+      }`}
                         >
-                          <SocialIcon
-                            size={18}
-                            className="text-white stroke-[1.8]"
-                          />
+                          {isFacebook && <FaFacebook size={20} color="white" />}
+                          {isInstagram && (
+                            <FaInstagram size={20} color="white" />
+                          )}
                         </a>
                       );
                     })}
                   </div>
-
                 </div>
               );
             }
@@ -269,8 +267,9 @@ const ContactInfo = () => {
                 </button>
 
                 <div
-                  className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-40 mt-4" : "max-h-0"
-                    }`}
+                  className={`overflow-hidden transition-all duration-300 ${
+                    isOpen ? "max-h-40 mt-4" : "max-h-0"
+                  }`}
                 >
                   <p className="text-black/70">{item.answer}</p>
                 </div>

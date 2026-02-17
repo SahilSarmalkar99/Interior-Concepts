@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import useRevealAnimation from "../../hooks/useRevealAnimation";
@@ -37,6 +37,15 @@ const Testimonials = () => {
   const sectionRef  = useRef(null);
 
   useRevealAnimation(sectionRef)
+
+  useEffect(() => {
+  const interval = setInterval(() => {
+    next();
+  }, 5000); 
+
+  return () => clearInterval(interval);
+}, [index]); 
+
 
   const animate = (nextIndex) => {
     gsap.to(cardRef.current, {
@@ -96,13 +105,13 @@ const Testimonials = () => {
               {t.text}
             </p>
 
-            <div className="font-medium">{t.name}</div>
+            <div className="font-medium">ClientName : {t.name}</div>
             <div className="text-sm text-black/60 mb-6 md:mb-10">
               {t.location}
             </div>
 
             {/* ARROWS */}
-            <div className="flex gap-4">
+            {/* <div className="flex gap-4">
               <button
                 onClick={prev}
                 className="w-10 h-10 rounded-full bg-black text-white flex items-center justify-center"
@@ -115,7 +124,7 @@ const Testimonials = () => {
               >
                 →
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
