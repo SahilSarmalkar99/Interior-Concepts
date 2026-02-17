@@ -50,9 +50,9 @@ const Clients = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="w-full px-1 py-10 md:py-32 md:px-24 overflow-hidden" >
+    <section ref={sectionRef} className="w-full bg-[#E8E5D8] px-1 py-10 md:py-32 md:px-24 overflow-hidden" >
       
-      <h2 className="text-[28px] mb-10 md:mb-16">Our Clients</h2>
+      <h2 className="text-[28px] text-center md:text-start mb-10 md:mb-16 font-[font1] text-[2xl]">Our Clients</h2>
 
       <div ref={containerRef} className="overflow-hidden">
         <div

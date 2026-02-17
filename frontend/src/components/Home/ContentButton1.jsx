@@ -22,7 +22,7 @@ const stats = [
       "We design intelligent commercial environments that optimise workflow, enhance user experience, and reflect your brand’s identity through thoughtful aesthetics.",
   },
   {
-    value: 2000,
+    value: 900,
     suffix: "+",
     title: "Satisfied Clients",
     desc:

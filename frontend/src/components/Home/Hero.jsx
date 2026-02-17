@@ -39,10 +39,20 @@ const Hero = () => {
 
   return (
     <div>
-      <div className="relative w-full h-[450px] md:h-[100dvh] overflow-hidden" id="top">
+      <div
+        className="relative w-full h-[450px] md:h-[100dvh] overflow-hidden"
+        id="top"
+      >
         <HeroImage />
-        <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-white/10 to-transparent  z-10 h-full flex flex-col justify-center items-center  md:px-16 md:pb-12 px-4 text-white">
-          <LeftText />
+        <div
+          className="absolute inset-0 z-10 
+                flex items-center 
+                px-6 md:px-20 
+                bg-gradient-to-r from-white/12 via-white/20 to-transparent"
+        >
+          <div className="w-full max-w-7xl mx-auto">
+            <LeftText />
+          </div>
         </div>
         {/* <HeroSection /> */}
       </div>
@@ -59,13 +69,13 @@ const Hero = () => {
         <ContentButton1 />
 
         {/* Clients Section */}
-        <Clients />
       </div>
 
       {/* <ExclusiveProjects />
 
-      <FeaturedProjects isdisplayed={[true ,true ,true]}/> */}
+<FeaturedProjects isdisplayed={[true ,true ,true]}/> */}
       <GalleryParallax />
+      <Clients />
 
       <Services />
 

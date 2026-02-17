@@ -106,7 +106,7 @@ export default function GallerySection() {
           {/* Overlay Content */}
           <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
             <h2 className="text-white text-4xl md:text-6xl font-semibold text-center">
-              Get inspired by our <br /> 1000+ project images
+              Get inspired by our <br /> 900+ project images
             </h2>
 
             <button onClick={() => navigate("/projects")} className="group relative mt-8 bg-[#E6A07B] text-white px-8 py-4 rounded-xl flex items-center gap-3 pointer-events-auto transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(0,0,0,0.15)]">

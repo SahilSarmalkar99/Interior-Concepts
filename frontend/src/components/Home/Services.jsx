@@ -16,59 +16,51 @@ gsap.registerPlugin(ScrollTrigger);
 
 const services = [
   {
-    id: "001",
     title: "Modular Kitchens",
     desc: "Precision-designed kitchens that maximise space, improve workflow, and blend style with everyday practicality.",
-    stat: "90+ Transformed Spaces",
+    stat: "Transformed Spaces",
     img: kitchen,
   },
   {
-    id: "002",
     title: "Modular Wardrobes",
     desc: "Custom storage solutions crafted for elegance, organisation, and seamless integration into your interiors.",
-    stat: "45+ Transformed Spaces",
+    stat: "Transformed Spaces",
     img: wardrobes,
   },
   {
-    id: "003",
     title: "Lighting Design",
     desc: "Layered lighting solutions that enhance mood, highlight architecture, and elevate the overall ambience.",
-    stat: "30+ Transformed Spaces",
+    stat: "Transformed Spaces",
     img: light,
   },
   {
-    id: "004",
     title: "Flooring Solutions",
     desc: "Durable, refined flooring choices selected to complement your design while standing up to daily life.",
-    stat: "20+ Transformed Spaces",
+    stat: "Transformed Spaces",
     img: flooring,
   },
   {
-    id: "005",
     title: "Electrical Work",
     desc: "Safe, efficient electrical planning and execution—designed to support modern living and smart systems.",
-    stat: "35+ Transformed Spaces",
+    stat: "Transformed Spaces",
     img: electrical,
   },
   {
-    id: "006",
     title: "Civil Work",
     desc: "Structural modifications and build work executed with precision to support lasting, high-quality interiors.",
-    stat: "75+ Transformed Spaces",
+    stat: "Transformed Spaces",
     img: civil,
   },
   {
-    id: "007",
     title: "False Ceiling Design",
     desc: "Architectural ceiling solutions that improve acoustics, conceal services, and add visual depth.",
-    stat: "70+ Transformed Spaces",
+    stat: "Transformed Spaces",
     img: ceiling,
   },
   {
-    id: "008",
     title: "Wall Design & Painting",
     desc: "Textures, finishes, and colours thoughtfully curated to bring character, warmth, and cohesion to spaces.",
-    stat: "45+ Transformed Spaces",
+    stat: "Transformed Spaces",
     img: wall,
   },
 ];
@@ -132,11 +124,11 @@ const Services = () => {
         {services.map((s) => (
           <div
             key={s.id}
-            className=" service-row group grid grid-cols-1 md:grid-cols-[140px_1fr_480px]
+            className=" service-row group grid grid-cols-1 md:grid-cols-[1fr_1fr]
                    items-center  md:py-10 md:border-b border-black/10"
           >
             {/* NUMBER */}
-            <div className="text-black/60 text-sm mt-5">( {s.id} )</div>
+            {/* <div className="text-black/60 text-sm mt-5">( {s.id} )</div> */}
 
             {/* TEXT */}
             <div className="md:max-w-[520px]">
@@ -147,11 +139,8 @@ const Services = () => {
               </p>
 
               <div className="mt-10">
-                <span className="text-[20px] font-medium">
-                  {s.stat.split("+")[0]}+
-                </span>
-                <div className="text-[16px] text-black/60">
-                  Transformed Spaces
+                <div className="text-[16px] text-black/60 font-medium">
+                  {s.stat}
                 </div>
               </div>
             </div>
