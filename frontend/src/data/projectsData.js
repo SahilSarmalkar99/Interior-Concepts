@@ -10,8 +10,8 @@ import img8 from "../assets/balcony/217.png"
 import img9 from "../assets/balcony/218.png"
 
 import img10 from "../assets/office/233.png"
-import img11 from "../assets/office/234.png"
-import img12 from "../assets/office/235.png"
+import img11 from "../assets/office/234.jpeg"
+import img12 from "../assets/office/235.jpeg"
 import img13 from "../assets/office/236.png"
 import img14 from "../assets/office/237.png"
 
@@ -120,7 +120,7 @@ export const projectsData = [
     clientName: "MR. RAMESH JAIN",
     location: "THE HOME FIESTA",
     image: img12,
-    gallery: [img10, img11, img12 , img13 , img14],
+    gallery: [img10, img11 ,img12 , img13 , img14],
   },
   {
     id: 4,
@@ -155,7 +155,7 @@ export const projectsData = [
     id: 8,
     clientName: "MR. KARTHIK KRISHNAMoorthy",
     location: "UJWALA KUTIR, borivali ",
-    image: img5,
+    image: img81,
     gallery: [img80, img81, img82, img83, img84, img85, img86, img87, img88, img89, img90, img91],
   },
 ];
