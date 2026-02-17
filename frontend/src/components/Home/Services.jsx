@@ -138,11 +138,11 @@ const Services = () => {
                 {s.desc}
               </p>
 
-              <div className="mt-10">
+              {/* <div className="mt-10">
                 <div className="text-[16px] text-black/60 font-medium">
                   {s.stat}
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* IMAGE */}
