@@ -28,8 +28,18 @@ const contactInfo = [
   {
     type: "social",
     text: "Follow Us",
-    icons: [Facebook, Instagram],
+    socials: [
+      {
+        icon: Facebook,
+        link: "https://www.facebook.com/share/1AQvYU3SN4/",
+      },
+      {
+        icon: Instagram,
+        link: "https://www.instagram.com/interior_concepts_?igsh=dGgwMWY4cjE1N3pz",
+      },
+    ],
   },
+
 ];
 
 const faqData = [
@@ -96,19 +106,27 @@ const ContactInfo = () => {
                   <span className="text-black/80 font-medium">{item.text}</span>
 
                   <div className="flex gap-4">
-                    {item.icons.map((SocialIcon, i) => (
-                      <div
-                        key={i}
-                        className="w-11 h-11 rounded-xl bg-[#B8B2A5] flex items-center justify-center
-                         hover:scale-110 transition cursor-pointer"
-                      >
-                        <SocialIcon
-                          size={18}
-                          className="text-white stroke-[1.8]"
-                        />
-                      </div>
-                    ))}
+                    {item.socials.map((social, i) => {
+                      const SocialIcon = social.icon;
+
+                      return (
+                        <a
+                          key={i}
+                          href={social.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-11 h-11 rounded-xl bg-[#B8B2A5] flex items-center justify-center
+                          hover:scale-110 hover:bg-[#9C937A] transition duration-300"
+                        >
+                          <SocialIcon
+                            size={18}
+                            className="text-white stroke-[1.8]"
+                          />
+                        </a>
+                      );
+                    })}
                   </div>
+
                 </div>
               );
             }
@@ -251,9 +269,8 @@ const ContactInfo = () => {
                 </button>
 
                 <div
-                  className={`overflow-hidden transition-all duration-300 ${
-                    isOpen ? "max-h-40 mt-4" : "max-h-0"
-                  }`}
+                  className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-40 mt-4" : "max-h-0"
+                    }`}
                 >
                   <p className="text-black/70">{item.answer}</p>
                 </div>

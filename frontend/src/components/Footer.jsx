@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF, FaInstagram  } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -43,7 +43,7 @@ const Footer = () => {
             {/* SOCIALS */}
             <div className="flex gap-4">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/share/1AQvYU3SN4/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/80 text-black
@@ -54,14 +54,14 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://linkedin.com"
+                href="https://www.instagram.com/interior_concepts_?igsh=dGgwMWY4cjE1N3pz"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/80 text-black
                flex items-center justify-center
                hover:bg-white hover:scale-110 transition"
               >
-                <FaLinkedinIn size={16} />
+                <FaInstagram  size={16} />
               </a>
             </div>
 
