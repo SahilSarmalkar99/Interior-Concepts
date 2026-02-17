@@ -39,29 +39,38 @@ const LeftText = () => {
            flex flex-col 
            items-center text-center 
            md:items-start md:text-left 
-           mt-12 md:mt-0"
+            md:mt-0"
     >
       {/* Heading */}
-      <h1 className="text-[28px] sm:text-[34px] md:text-[60px]
-               leading-[1.15] 
+      <h1
+        className="text-[28px] sm:text-[34px] md:text-[60px]
+               leading-[1.05] 
                tracking-tight
                font-[font1]
-               text-[#090909]">
+               text-[#F5F3EF]"
+      >
+        <span className="word block ">Designs That</span>
+        <span
+          className="word block text-white font-extrabold 
+                 text-[1.08em] 
+                 tracking-wide 
+                 drop-shadow-[0_6px_18px_rgba(0,0,0,0.6)]"
+        >
+          Speak Your
+        </span>
 
-        <span className="word block">Designs That</span>
-        <span className="word block text-[#ec881d]">Speak Your</span>
         <span className="word block ">Way of Living</span>
       </h1>
 
       {/* Paragraph */}
       <p
-  className="para mt-5 max-w-md
+        className="para mt-5 max-w-md
              text-[15px] sm:text-[16px] md:text-[22px]
              leading-relaxed
              font-medium
              text-[rgba(243,241,236,0.92)]
 "
-> 
+      >
         From concept to completion, we design interiors that feel personal,
         practical, and timeless — bringing your vision to life with expert
         craftsmanship. 20+ years of experience

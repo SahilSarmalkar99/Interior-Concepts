@@ -67,9 +67,14 @@ const Exclusive = () => {
                   {project.clientName}
                 </h3>
 
-                <p className="text-black/60 text-sm uppercase">
-                  {project.location}
-                </p>
+                <p className="mt-1 text-[12px] md:text-[13px] 
+               tracking-[0.15em] 
+               font-semibold 
+               text-black/50 
+               uppercase">
+  {project.location}
+</p>
+
               </div>
             ))}
           </div>
