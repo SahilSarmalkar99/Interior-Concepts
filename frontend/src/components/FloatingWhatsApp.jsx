@@ -10,7 +10,7 @@ const FloatingWhatsApp = () => {
         rel="noopener noreferrer"
         className="flex items-center justify-center w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-xl transition-transform duration-300 hover:scale-110"
       >
-        <FaWhatsapp size={22} />
+        <FaWhatsapp size={36} />
       </a>
 
       {/* Hover Text */}
