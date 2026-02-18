@@ -41,7 +41,7 @@ const Testimonials = () => {
   useEffect(() => {
   const interval = setInterval(() => {
     next();
-  }, 5000); 
+  }, 3000); 
 
   return () => clearInterval(interval);
 }, [index]); 

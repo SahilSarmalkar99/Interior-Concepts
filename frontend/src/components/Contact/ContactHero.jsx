@@ -43,7 +43,7 @@ const ContactHero = () => {
       {/* IMAGE */}
       <img
         ref={imgRef}
-        src={img}
+        src="https://framerusercontent.com/images/8BoWPv6AfdFRTEBN3LdyWJo68YY.jpg?scale-down-to=2048&width=6082&height=4055"
         className="absolute inset-0 w-full h-full object-cover"
       />
 
