@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import img from "../../assets/display/service.jpeg"
 
 const Servicehero = () => {
   const imgRef = useRef(null);
@@ -39,7 +40,7 @@ const Servicehero = () => {
       {/* IMAGE */}
       <img
         ref={imgRef}
-        src="https://framerusercontent.com/images/t8wfsgBHFfqnnWtQRlpy7V3Pmg.png?width=1200&height=673"
+        src={img}
         className="absolute inset-0 w-full h-full object-cover"
       />
 

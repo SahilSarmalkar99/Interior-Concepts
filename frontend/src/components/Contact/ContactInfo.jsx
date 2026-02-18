@@ -132,7 +132,7 @@ const ContactInfo = () => {
             // NORMAL CONTACT INFO
             const Icon = item.icon;
             return (
-              <div className="flex items-start gap-4 bg-[#F3F2EF] rounded-2xl px-4 py-4">
+              <div className="flex items-start gap-4 bg-[#F3F2EF] rounded-2xl px-4 py-4 min-w-0">
                 <div
                   className="w-12 h-12 md:w-16 md:h-16 rounded-xl bg-[#B8B2A5] 
                   flex items-center justify-center shrink-0"
@@ -140,7 +140,7 @@ const ContactInfo = () => {
                   <Icon size={18} className="text-white" />
                 </div>
 
-                <span className="text-black/80 text-sm md:text-base break-all min-w-0">
+                <span className="text-black/80 text-sm md:text-base break-words min-w-0">
                   {item.text}
                 </span>
               </div>

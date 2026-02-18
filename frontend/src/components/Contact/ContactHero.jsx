@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import img from "../../assets/display/aboutus.png"
+import img from "../../assets/display/contact.jpeg"
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -43,7 +43,7 @@ const ContactHero = () => {
       {/* IMAGE */}
       <img
         ref={imgRef}
-        src="https://framerusercontent.com/images/8BoWPv6AfdFRTEBN3LdyWJo68YY.jpg?scale-down-to=2048&width=6082&height=4055"
+        src={img}
         className="absolute inset-0 w-full h-full object-cover"
       />
 
