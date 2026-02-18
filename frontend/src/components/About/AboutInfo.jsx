@@ -70,13 +70,13 @@ const AboutInfo = () => {
   "
         >
           {/* Top Left */}
-          <div className="relative overflow-hidden rounded-2xl aspect-[4/3] lg:aspect-[16/9]">
+          {/* <div className="relative overflow-hidden rounded-2xl aspect-[4/3] lg:aspect-[16/9]">
             <img
               src={img1}
               alt="Interior design"
               className="w-full h-full object-cover"
             />
-          </div>
+          </div> */}
 
           {/* Right Tall Image */}
           <div className="relative overflow-hidden rounded-2xl aspect-[3/4] sm:row-span-2 lg:aspect-[3/4]">
@@ -88,7 +88,7 @@ const AboutInfo = () => {
           </div>
 
           {/* Bottom Left */}
-          <div className="relative overflow-hidden rounded-2xl aspect-[4/3] lg:aspect-[16/9]">
+          <div className="relative overflow-hidden rounded-2xl aspect-[4/3] lg:aspect-[3/4]">
             <img
               src={img3}
               alt="Interior design"
