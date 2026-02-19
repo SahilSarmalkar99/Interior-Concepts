@@ -1,5 +1,5 @@
 import kitchen from "../../assets/kitchen/kitchen.jpeg";
-import wardrobes from "../../assets/kitchen/kitchen4.jpeg";
+import wardrobes from "../../assets/room/image.png";
 import light from "../../assets/room/room3.jpeg";
 import flooring from "../../assets/room/room8.jpeg";
 import electrical from "../../assets/bedroom/bedroom3.jpeg";

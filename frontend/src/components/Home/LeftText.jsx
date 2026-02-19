@@ -65,15 +65,17 @@ const LeftText = () => {
       {/* Paragraph */}
       <p
         className="para mt-5 max-w-md
-             text-[15px] sm:text-[16px] md:text-[22px]
-             leading-relaxed
-             font-medium
-             text-[rgba(243,241,236,0.92)]
-"
+  text-[15px] sm:text-[16px] md:text-[22px]
+  leading-relaxed
+  font-medium
+  text-[rgba(243,241,236,0.92)]"
       >
         From concept to completion, we design interiors that feel personal,
         practical, and timeless — bringing your vision to life with expert
-        craftsmanship. 20+ years of experience
+        craftsmanship.{" "} <br />
+        <span className="text-white  text-[20.5px] md:text-[25px] font-semibold border-b-2 border-[#807B6C]">
+          20+ years of experience
+        </span>
       </p>
     </div>
   );
